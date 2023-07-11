@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkbox Selection Result</title>
+</head>
+<body>
+    <h1>Selected Checkboxes:</h1>
+    <ul>
+        {% for checkbox in selected_checkboxes %}
+            <li>{{ checkbox }}</li>
+        {% endfor %}
+
+        {{selected_checkboxes}}
+    </ul>
+</body>
+</html>

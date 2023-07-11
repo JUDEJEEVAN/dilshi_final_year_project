@@ -218,6 +218,12 @@ button:hover {
             </div>
         </div>
     </div>
+    <h1>Selected Checkboxes:</h1>
+    <ul>
+        {% for checkbox in selected_checkboxes %}
+            <li>{{ checkbox }}</li>
+        {% endfor %}
+    </ul>
 
     <script src="script.js"></script>
 </body>

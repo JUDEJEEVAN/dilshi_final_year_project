@@ -161,28 +161,25 @@ button:hover {
 <body>
     <div class="container">
         <div class="wrapper page_two_wrapper" id="page_two_wrapper">
-            <h2 class="prompt">Select which files to process</h2>
-            <div class="file-selector">
-                <div class="files" style="overflow-x: hidden; overflow-y: auto">
-<!--                    <div class="selector"><input type="checkbox" name="selector" id=""><label for="selector">MAD-->
-<!--                            Assignment</label></div>-->
-<!--                    <div class="selector"><input type="checkbox" name="selector" id=""><label for="selector">WAD-->
-<!--                            Assignment</label></div>-->
-<!--                    <div class="selector"><input type="checkbox" name="selector" id=""><label for="selector">CGA-->
-<!--                            Assignment</label></div>-->
-
+            <form action="/page_three" method="post">
+                <h2 class="prompt">Select which files to process</h2>
+            <div class="file-selector" style="overflow-x: hidden; overflow-y: auto">
+                <div class="files" >
                     {% if excel_files %}
+                    {% i = 1 %}
                     {% for file in excel_files %}
-                        <input type="checkbox">{{file}}<br>
+                        <input type="checkbox" id="checkbox{{i}}" name="checkboxes[]">{{file}}<br>
                     {% endfor %}
                     {% endif %}
                 </div>
             </div>
             <br>
             <div class="nav-buttons">
-                <button onclick="window.location.href='/index.html'" class="back-button">Back</button>
-                <button onclick="window.location.href='/page_three.html'" class="next-button">Next</button>
+                <!-- <button onclick="window.location.href='/index.html'" class="back-button">Back</button> -->
+                <!-- <button onclick="window.location.href='/page_three.html'" class="next-button">Next</button> -->
+                <input type="submit" value="next">
             </div>
+            </form>
         </div>
     </div>
 
